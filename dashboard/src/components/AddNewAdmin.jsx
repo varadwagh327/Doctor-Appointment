@@ -3,7 +3,7 @@ import { Context } from "../index";
 import { Navigate, useNavigate } from "react-router-dom";
 import { toast } from "react-toastify";
 import axios from "axios";
-import logo from "../All_Images/logo.png"
+import logo from "../All_Images/logo.png";
 
 const AddNewAdmin = () => {
   const { isAuthenticated } = useContext(Context);

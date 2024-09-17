@@ -1,18 +1,16 @@
 import React from "react";
 
-const Hero = ({ title, imageUrl }) => {
+const Hero = ({  imageUrl }) => {
   return (
     <>
       <div className="hero container">
         <div className="banner">
-          <h1>{title}</h1>
+          <h1>Welcome to VCare Medical Institute | Your Trusted Healthcare Provider</h1>
           <p>
-            ZeeCare Medical Institute is a state-of-the-art facility dedicated
-            to providing comprehensive healthcare services with compassion and
-            expertise. Our team of skilled professionals is committed to
-            delivering personalized care tailored to each patient's needs. At
-            ZeeCare, we prioritize your well-being, ensuring a harmonious
-            journey towards optimal health and wellness.
+            We glad your here. Easily book appointments, view your medical
+            records, and manage your healthcare needs all in one place. If you
+            need assistance, we're always here to help. Your health is our
+            priority!
           </p>
         </div>
         <div className="banner">

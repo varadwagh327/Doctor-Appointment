@@ -1,6 +1,6 @@
 import React from "react";
 
-const Biography = ({imageUrl}) => {
+const Biography = ({ imageUrl }) => {
   return (
     <>
       <div className="container biography">
@@ -9,28 +9,23 @@ const Biography = ({imageUrl}) => {
         </div>
         <div className="banner">
           <p>Biography</p>
-          <h3>Who We Are</h3>
+          <h3>Dr. Varad Wagh</h3>
+          <h4>Specialty: Cardiology</h4>
+          <h5>Years of Experience: 5+ years</h5>
           <p>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Ducimus
-            blanditiis sequi aperiam. Debitis fugiat harum ex maxime illo
-            consequatur mollitia voluptatem omnis nihil nesciunt beatae esse
-            ipsam, sapiente totam aspernatur porro ducimus aperiam nisi. Ex
-            magnam voluptatum consectetur reprehenderit fugiat recusandae aut
-            similique illum natus velit, praesentium nostrum nesciunt. Deleniti,
-            nesciunt laboriosam totam iusto!
+            Welcome to my practice! I am Dr. Varad Wagh, a Cardiology with over
+            five years of experience. I am passionate about providing
+            personalized care to each of my patients and ensuring they receive
+            the highest quality treatment.
           </p>
-          <p>We are all in 2024!</p>
-          <p>We are working on a MERN STACK PROJECT.</p>
+
           <p>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolores
-            assumenda exercitationem accusamus sit repellendus quo optio dolorum
-            corporis corrupti. Quas similique vel minima veniam tenetur
-            obcaecati atque magni suscipit laboriosam! Veniam vitae minus nihil
-            cupiditate natus provident. Ex illum quasi pariatur odit nisi
-            voluptas illo qui ipsum mollitia. Libero, assumenda?
+            Outside of the clinic, I enjoy doing hardwork and I am dedicated. My
+            goal is to make your healthcare experience as comfortable and
+            effective as possible. Whether you’re here for a routine checkup or
+            specialized care, I look forward to supporting your health and
+            well-being.
           </p>
-          <p>Lorem ipsum dolor sit amet!</p>
-          <p>Coding is fun!</p>
         </div>
       </div>
     </>
