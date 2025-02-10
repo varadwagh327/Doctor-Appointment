@@ -1,10 +1,10 @@
 import axios from "axios";
-import  { useContext, useEffect, useState } from "react";
-import { Context } from "../index";
+import { useContext, useEffect, useState } from "react";
+import { Context } from "../index.js";
 import { Navigate } from "react-router-dom";
 
 const Messages = () => {
-  const [messages, setMessages] = useState([]);
+  const [message, setMessages] = useState([]);
   const { isAuthenticated } = useContext(Context);
   useEffect(() => {
     const fetchMessages = async () => {
@@ -12,8 +12,8 @@ const Messages = () => {
         const { data } = await axios.get(
           "http://localhost:4000/api/v1/message/getall",
           { withCredentials: true }
-        );
-        setMessages(data.messages);
+        ); 
+        setMessages(data.message); // Ensure `data.messages` exists
       } catch (error) {
         console.log(error.response.data.message);
       }
@@ -29,8 +29,8 @@ const Messages = () => {
     <section className="page messages">
       <h1>MESSAGE</h1>
       <div className="banner">
-        {messages && messages.length > 0 ? (
-          messages.map((element) => {
+        {message && message.length > 0 ? (
+          message.map((element) => {
             return (
               <div className="card" key={element._id}>
                 <div className="details">
