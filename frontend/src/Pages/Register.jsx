@@ -58,10 +58,8 @@ const Register = () => {
         <h2>Sign Up</h2>
         <p>Please Sign Up To Continue</p>
         <p>
-        We glad your here. Easily book appointments, view your medical
-          records, and manage your healthcare needs all in one place. If you
-          need assistance, we're always here to help. Your health is our
-          priority!
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Placeat culpa
+          voluptas expedita itaque ex, totam ad quod error?
         </p>
         <form onSubmit={handleRegistration}>
           <div>
