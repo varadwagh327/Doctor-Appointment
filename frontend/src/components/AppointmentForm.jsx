@@ -38,7 +38,6 @@ const AppointmentForm = () => {
         { withCredentials: true }
       );
       setDoctors(data.doctors);
-      console.log(data.doctors);
     };
     fetchDoctors();
   }, []);
@@ -58,8 +57,7 @@ const AppointmentForm = () => {
           gender,
           appointment_date: appointmentDate,
           department,
-          doctor_firstName: doctorFirstName,
-          doctor_lastName: doctorLastName,
+          doctor: { firstName: doctorFirstName || "N/A", lastName: doctorLastName || "N/A" },  // ✅ Fix here
           hasVisited: hasVisitedBool,
           address,
         },
@@ -68,24 +66,31 @@ const AppointmentForm = () => {
           headers: { "Content-Type": "application/json" },
         }
       );
+  
       toast.success(data.message);
-      setFirstName(""),
-        setLastName(""),
-        setEmail(""),
-        setPhone(""),
-        setNic(""),
-        setDob(""),
-        setGender(""),
-        setAppointmentDate(""),
-        setDepartment(""),
-        setDoctorFirstName(""),
-        setDoctorLastName(""),
-        setHasVisited(""),
-        setAddress("");
+      console.log("Appointment Response:", data);
+  
+      // Reset form values
+      setFirstName("");
+      setLastName("");
+      setEmail("");
+      setPhone("");
+      setNic("");
+      setDob("");
+      setGender("");
+      setAppointmentDate("");
+      setDepartment("Pediatrics");
+      setDoctorFirstName("");
+      setDoctorLastName("");
+      setHasVisited(false);
+      setAddress("");
     } catch (error) {
-      toast.error(error.response.data.message);
+      console.error("Appointment Error:", error.response?.data);
+      toast.error(error.response?.data?.message || "An error occurred.");
     }
   };
+  
+  
 
   return (
     <>
