@@ -24,7 +24,7 @@ const Register = () => {
       await axios
         .post(
           "http://localhost:4000/api/v1/user/patient/register",
-          { firstName, lastName, email, phone, nic, dob, gender, password },
+          { firstName, lastName, email, phone, nic, dob, gender, password, role: "Patient" },
           {
             withCredentials: true,
             headers: { "Content-Type": "application/json" },
